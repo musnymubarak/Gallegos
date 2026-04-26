@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-surface border-t border-white/5">
-      <div className="container-center py-20">
+      <div className="container-center py-10 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
@@ -20,7 +20,7 @@ export default function Footer() {
                 Gallegos
               </span>
             </div>
-            <p className="text-text-secondary text-sm leading-relaxed mb-6">
+            <p className="text-text-secondary text-sm leading-relaxed mb-4 md:mb-6 max-w-sm">
               {siteConfig.tagline} Bold flavours and sizzling dishes in the heart of Stapleford.
             </p>
             <div className="flex gap-4">
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-bold uppercase tracking-wider text-sm mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+            <h3 className="text-white font-bold uppercase tracking-wider text-xs md:text-sm mb-4 md:mb-6" style={{ fontFamily: 'var(--font-display)' }}>
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -67,14 +67,14 @@ export default function Footer() {
 
           {/* Opening Hours */}
           <div>
-            <h3 className="text-white font-bold uppercase tracking-wider text-sm mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+            <h3 className="text-white font-bold uppercase tracking-wider text-xs md:text-sm mb-4 md:mb-6" style={{ fontFamily: 'var(--font-display)' }}>
               Opening Hours
             </h3>
             <ul className="space-y-2">
               {siteConfig.openingHours.map((item) => (
-                <li key={item.day} className="flex justify-between text-sm">
-                  <span className="text-text-secondary">{item.day}</span>
-                  <span className="text-white/80">{item.hours}</span>
+                <li key={item.day} className="flex justify-between text-xs sm:text-sm gap-4">
+                  <span className="text-text-secondary whitespace-nowrap">{item.day}</span>
+                  <span className="text-white/80 whitespace-nowrap">{item.hours}</span>
                 </li>
               ))}
             </ul>
@@ -82,7 +82,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-bold uppercase tracking-wider text-sm mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+            <h3 className="text-white font-bold uppercase tracking-wider text-xs md:text-sm mb-4 md:mb-6" style={{ fontFamily: 'var(--font-display)' }}>
               Contact
             </h3>
             <div className="space-y-4 text-sm">
@@ -114,7 +114,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-10 md:mt-12 pt-6 md:pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-text-secondary text-xs">
             © {currentYear} Gallegos. All rights reserved.
           </p>

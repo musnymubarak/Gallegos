@@ -91,12 +91,12 @@
 
   /* Section padding */
   .section-padding {
-    padding: 160px 3rem;
+    padding: 80px 1rem;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .section-padding {
-      padding: 100px 2rem;
+      padding: 160px 3rem;
     }
   }
 
@@ -104,7 +104,23 @@
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-center {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* Hide scrollbar for horizontal scroll areas */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

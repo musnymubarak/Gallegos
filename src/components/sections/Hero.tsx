@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background with Ken Burns */}
       <div className="absolute inset-0">
         <div
@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 -mt-24" style={{ textAlign: 'center' }}>
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 -mt-10 md:-mt-24" style={{ textAlign: 'center' }}>
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,11 +39,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[1.15]"
-          style={{ fontFamily: 'var(--font-display)', marginBottom: '40px', textAlign: 'center' }}
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[1.1] md:leading-[1.15] mb-5 md:mb-10 text-center"
+          style={{ fontFamily: 'var(--font-display)' }}
         >
           <span className="text-white">Bold</span> <span className="text-gradient">Flavours.</span>
-          <div className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-wide" style={{ marginTop: '16px' }}>
+          <div className="text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl tracking-wide mt-2 md:mt-4">
             Stapleford&apos;s Finest.
           </div>
         </motion.h1>
@@ -53,8 +53,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.7 }}
-          className="text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed"
-          style={{ fontFamily: 'var(--font-body)', marginTop: '20px', marginBottom: '60px', maxWidth: '800px', margin: '20px auto 60px' }}
+          className="text-base md:text-xl lg:text-2xl text-white/80 leading-relaxed mt-5 md:mt-5 mb-10 md:mb-16 max-w-[800px] mx-auto"
+          style={{ fontFamily: 'var(--font-body)' }}
         >
           Sizzling burgers, fiery sizzlers, and handcrafted pasta — <br className="hidden lg:block" /> all under one roof in the heart of Nottingham.
         </motion.p>
@@ -69,8 +69,8 @@ export default function Hero() {
         >
           <Link
             href="/menu"
-            className="group relative inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary-light text-white rounded-[16px] font-black uppercase tracking-[0.15em] text-base transition-all duration-500 hover:shadow-[0_0_40px_rgba(200,16,46,0.5)] hover:-translate-y-1"
-            style={{ fontFamily: 'var(--font-display)', minHeight: '64px', minWidth: '240px', padding: '18px 48px' }}
+            className="group relative inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary-light text-white rounded-[16px] font-black uppercase tracking-[0.15em] text-sm md:text-base transition-all duration-500 hover:shadow-[0_0_40px_rgba(200,16,46,0.5)] hover:-translate-y-1 h-14 md:h-16 min-w-[200px] md:min-w-[240px] px-8 md:px-12"
+            style={{ fontFamily: 'var(--font-display)' }}
           >
             View Menu
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,8 +79,8 @@ export default function Hero() {
           </Link>
           <Link
             href="/order"
-            className="inline-flex items-center justify-center gap-3 border-[3px] border-white/30 hover:border-primary text-white rounded-[16px] font-black uppercase tracking-[0.15em] text-base transition-all duration-500 hover:bg-primary/10 hover:-translate-y-1"
-            style={{ fontFamily: 'var(--font-display)', minHeight: '64px', minWidth: '240px', padding: '18px 48px' }}
+            className="inline-flex items-center justify-center gap-3 border-[3px] border-white/30 hover:border-primary text-white rounded-[16px] font-black uppercase tracking-[0.15em] text-sm md:text-base transition-all duration-500 hover:bg-primary/10 hover:-translate-y-1 h-14 md:h-16 min-w-[200px] md:min-w-[240px] px-8 md:px-12"
+            style={{ fontFamily: 'var(--font-display)' }}
           >
             Order Now
           </Link>

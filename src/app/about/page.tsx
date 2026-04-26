@@ -16,8 +16,8 @@ export default function AboutPage() {
     <>
       {/* Hero Banner */}
       <section
-        className="relative overflow-hidden px-6"
-        style={{ paddingTop: '200px', paddingBottom: '100px' }}
+        className="relative overflow-hidden px-4 md:px-6"
+        style={{ paddingTop: '140px', paddingBottom: '60px' }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-surface via-surface-mid to-background" />
         <div className="absolute inset-0 opacity-10">
@@ -36,7 +36,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-black uppercase text-white"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase text-white"
             style={{ fontFamily: 'var(--font-display)', marginBottom: '24px' }}
           >
             About <span className="text-gradient">Gallegos</span>
@@ -57,10 +57,10 @@ export default function AboutPage() {
       {/* Story Section */}
       <section
         className="bg-background"
-        style={{ padding: '120px 24px' }}
+        style={{ padding: '60px 16px' }}
       >
         <div className="container-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -104,7 +104,7 @@ export default function AboutPage() {
                   style={{ backgroundImage: `url('/images/about-team.jpg')` }}
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-primary/30 rounded-3xl -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-primary/30 rounded-3xl -z-10 hidden md:block" />
             </motion.div>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
       {/* Pillars */}
       <section
         className="bg-surface-mid"
-        style={{ padding: '120px 24px' }}
+        style={{ padding: '60px 16px' }}
       >
         <div className="container-center">
           <motion.div

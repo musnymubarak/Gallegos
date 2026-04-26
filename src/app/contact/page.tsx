@@ -28,8 +28,8 @@ export default function ContactPage() {
     <>
       {/* Page Header */}
       <section
-        className="bg-gradient-to-b from-surface to-background px-6"
-        style={{ paddingTop: '200px', paddingBottom: '100px' }}
+        className="bg-gradient-to-b from-surface to-background px-4 md:px-6"
+        style={{ paddingTop: '140px', paddingBottom: '60px' }}
       >
         <div className="container-center" style={{ textAlign: 'center' }}>
           <motion.span
@@ -44,7 +44,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-black uppercase text-white"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase text-white"
             style={{ fontFamily: 'var(--font-display)', marginBottom: '24px' }}
           >
             Contact <span className="text-gradient">Us</span>
@@ -64,10 +64,10 @@ export default function ContactPage() {
       {/* Main Content */}
       <section 
         className="bg-background relative"
-        style={{ padding: '160px 24px' }}
+        style={{ padding: '80px 16px' }}
       >
         <div className="container-center relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-32 items-start">
             
             {/* Left Column - Essential Info */}
             <motion.div
@@ -79,13 +79,13 @@ export default function ContactPage() {
               {/* Contact List */}
               <div className="space-y-12">
                 <h3 
-                  className="text-3xl md:text-4xl font-black text-white uppercase tracking-widest" 
+                  className="text-2xl md:text-3xl lg:text-4xl font-black text-white uppercase tracking-wider md:tracking-widest" 
                   style={{ fontFamily: 'var(--font-display)', marginBottom: '40px' }}
                 >
                   Contact <span className="text-gradient">Information</span>
                 </h3>
                 
-                <div className="bg-[#111111] rounded-[40px] border border-white/10 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                <div className="bg-[#111111] rounded-2xl md:rounded-[40px] border border-white/10 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                   {[
                     {
                       icon: (
@@ -124,14 +124,14 @@ export default function ContactPage() {
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
                       rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className={`flex items-start gap-8 p-10 hover:bg-white/[0.04] transition-all duration-500 group ${idx !== 2 ? 'border-b border-white/5' : ''}`}
+                      className={`flex items-start gap-4 md:gap-8 p-5 md:p-10 hover:bg-white/[0.04] transition-all duration-500 group ${idx !== 2 ? 'border-b border-white/5' : ''}`}
                     >
-                      <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-primary/30 mt-1">
+                      <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-primary/30 mt-1">
                         {item.icon}
                       </div>
                       <div>
-                        <h4 className="text-primary font-black text-xs uppercase tracking-[0.3em] mb-3" style={{ fontFamily: 'var(--font-display)' }}>{item.title}</h4>
-                        <p className="text-white text-lg md:text-xl group-hover:text-primary transition-colors font-bold leading-relaxed">{item.content}</p>
+                        <h4 className="text-primary font-black text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] mb-1 md:mb-3" style={{ fontFamily: 'var(--font-display)' }}>{item.title}</h4>
+                        <p className="text-white text-sm md:text-lg lg:text-xl group-hover:text-primary transition-colors font-bold leading-relaxed break-all md:break-normal">{item.content}</p>
                       </div>
                     </a>
                   ))}
@@ -139,32 +139,32 @@ export default function ContactPage() {
               </div>
 
               {/* Opening Hours Block */}
-              <div className="bg-[#111111] rounded-[40px] p-10 border border-white/10 relative overflow-hidden group shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+              <div className="bg-[#111111] rounded-2xl md:rounded-[40px] p-5 md:p-10 border border-white/10 relative overflow-hidden group shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                 <div className="absolute top-0 right-0 p-10 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
                   <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 
-                <div className="flex items-start gap-10 mb-10 relative z-10">
-                  <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary/30 mt-1">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-start gap-4 md:gap-10 mb-6 md:mb-10 relative z-10">
+                  <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary/30 mt-1">
+                    <svg className="w-5 h-5 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <h3 
-                    className="text-primary text-2xl font-black uppercase tracking-widest mt-3" 
+                    className="text-primary text-lg md:text-2xl font-black uppercase tracking-wider md:tracking-widest mt-2 md:mt-3" 
                     style={{ fontFamily: 'var(--font-display)' }}
                   >
                     Opening <span className="text-white">Hours</span>
                   </h3>
                 </div>
                 
-                <div className="space-y-4 relative z-10">
+                <div className="space-y-3 md:space-y-4 relative z-10">
                   {siteConfig.openingHours.map((item) => (
-                    <div key={item.day} className="flex justify-between items-center border-b border-white/5 pb-4 last:border-0 last:pb-0">
-                      <span className="text-text-secondary font-semibold text-lg">{item.day}</span>
-                      <span className="text-white font-black text-lg">{item.hours}</span>
+                    <div key={item.day} className="flex justify-between items-center border-b border-white/5 pb-2 md:pb-4 last:border-0 last:pb-0 gap-4">
+                      <span className="text-text-secondary font-semibold text-sm md:text-lg whitespace-nowrap">{item.day}</span>
+                      <span className="text-white font-black text-sm md:text-lg whitespace-nowrap">{item.hours}</span>
                     </div>
                   ))}
                 </div>
@@ -182,7 +182,7 @@ export default function ContactPage() {
               {/* Form Container */}
               {submitted ? (
                 <div 
-                  className="bg-surface rounded-[48px] border-2 border-success/30 text-center h-full flex flex-col items-center justify-center p-20 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                  className="bg-surface rounded-2xl md:rounded-[48px] border-2 border-success/30 text-center h-full flex flex-col items-center justify-center p-8 md:p-20 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                 >
                   <div className="w-20 h-20 rounded-full bg-success/20 flex items-center justify-center text-4xl mb-8">✅</div>
                   <h3 className="text-4xl font-black text-white mb-6 uppercase" style={{ fontFamily: 'var(--font-display)' }}>
@@ -200,15 +200,15 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <div 
-                  className="bg-surface rounded-[48px] border border-white/5 flex flex-col overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                  className="bg-surface rounded-2xl md:rounded-[48px] border border-white/5 flex flex-col overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                 >
                   {/* Header */}
                   <div 
                     className="bg-white/[0.03] border-b border-white/5"
-                    style={{ padding: '60px 50px' }}
+                    style={{ padding: '30px 24px' }}
                   >
                     <h3 
-                      className="text-4xl md:text-5xl font-black text-white uppercase tracking-widest leading-tight" 
+                      className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-wider md:tracking-widest leading-tight" 
                       style={{ fontFamily: 'var(--font-display)', margin: 0 }}
                     >
                       Send us a <span className="text-gradient">Message</span>
@@ -219,7 +219,7 @@ export default function ContactPage() {
                   <form 
                     onSubmit={handleSubmit(onSubmit)} 
                     className="flex flex-col"
-                    style={{ padding: '50px' }}
+                    style={{ padding: '24px' }}
                   >
                     <input type="text" {...register('honeypot')} className="hidden" tabIndex={-1} autoComplete="off" />
 
@@ -276,7 +276,7 @@ export default function ContactPage() {
 
               {/* Map */}
               <div 
-                className="rounded-[40px] overflow-hidden border border-white/5 grayscale hover:grayscale-0 transition-all duration-700 shadow-xl"
+                className="rounded-2xl md:rounded-[40px] overflow-hidden border border-white/5 grayscale hover:grayscale-0 transition-all duration-700 shadow-xl"
                 style={{ height: '400px' }}
               >
                 <iframe

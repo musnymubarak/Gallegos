@@ -41,7 +41,7 @@ export default function Navbar() {
             : 'bg-black/40 backdrop-blur-[2px]'
         }`}
       >
-        <nav className="container-center h-24 flex items-center justify-between px-12 lg:px-16">
+        <nav className="container-center h-24 flex items-center justify-between px-4 md:px-12 lg:px-16">
           {/* Logo */}
           <div className="flex-1 flex justify-start">
             <Link href="/" className="flex items-center gap-3 group">

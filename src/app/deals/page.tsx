@@ -7,8 +7,8 @@ export default function DealsPage() {
   return (
     <>
       <section 
-        className="bg-gradient-to-b from-surface to-background px-6"
-        style={{ paddingTop: '200px', paddingBottom: '100px' }}
+        className="bg-gradient-to-b from-surface to-background px-4 md:px-6"
+        style={{ paddingTop: '140px', paddingBottom: '60px' }}
       >
         <div className="container-center" style={{ textAlign: 'center' }}>
           <motion.span
@@ -23,7 +23,7 @@ export default function DealsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-black uppercase text-white"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase text-white"
             style={{ fontFamily: 'var(--font-display)', marginBottom: '24px' }}
           >
             Deals & <span className="text-gradient">Offers</span>
@@ -42,7 +42,7 @@ export default function DealsPage() {
 
       <section 
         className="bg-background"
-        style={{ padding: '120px 24px' }}
+        style={{ padding: '60px 16px' }}
       >
         <div className="container-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -68,7 +68,7 @@ export default function DealsPage() {
                 </div>
 
                 {/* Content */}
-                <div style={{ padding: '40px' }}>
+                <div style={{ padding: '24px' }}>
                   <h3 
                     className="text-3xl font-black text-white group-hover:text-primary transition-colors uppercase tracking-tight" 
                     style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}
@@ -102,10 +102,10 @@ export default function DealsPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center bg-surface rounded-3xl border border-white/5 shadow-2xl"
-            style={{ marginTop: '80px', padding: '60px' }}
+            className="text-center bg-surface rounded-2xl md:rounded-3xl border border-white/5 shadow-2xl"
+            style={{ marginTop: '60px', padding: '32px 24px' }}
           >
-            <h3 className="text-3xl font-black text-white" style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
+            <h3 className="text-2xl md:text-3xl font-black text-white" style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
               Want More Deals?
             </h3>
             <p className="text-text-secondary text-lg" style={{ marginBottom: '32px' }}>
@@ -115,7 +115,7 @@ export default function DealsPage() {
               href="https://www.facebook.com/Gallegos.UK"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary hover:bg-primary-light text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-base transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 hover:-translate-y-1"
+              className="inline-flex items-center gap-2 md:gap-3 bg-primary hover:bg-primary-light text-white px-6 md:px-10 py-4 md:py-5 rounded-full font-black uppercase tracking-wider md:tracking-widest text-sm md:text-base transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 hover:-translate-y-1"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Follow on Facebook

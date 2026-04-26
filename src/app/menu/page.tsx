@@ -14,7 +14,7 @@ export default function MenuPage() {
       {/* Page Header */}
       <section
         className="bg-gradient-to-b from-surface to-background relative overflow-hidden"
-        style={{ paddingTop: '200px', paddingBottom: '60px', paddingLeft: '24px', paddingRight: '24px' }}
+        style={{ paddingTop: '140px', paddingBottom: '40px', paddingLeft: '16px', paddingRight: '16px' }}
       >
         <div className="container-center" style={{ textAlign: 'center' }}>
           <motion.div
@@ -33,7 +33,7 @@ export default function MenuPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-black uppercase text-white leading-tight"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black uppercase text-white leading-tight"
             style={{ fontFamily: 'var(--font-display)', marginBottom: '24px' }}
           >
             Our <span className="text-gradient">Menu</span>
@@ -53,7 +53,7 @@ export default function MenuPage() {
       {/* Sticky Category Tabs */}
       <div className="sticky top-24 z-30 bg-black/90 backdrop-blur-md border-b border-white/5" style={{ padding: '0 24px' }}>
         <div className="container-center">
-          <div className="flex overflow-x-auto gap-3 scrollbar-hide" style={{ padding: '20px 0' }}>
+          <div className="flex overflow-x-auto gap-2 md:gap-3 scrollbar-hide -mx-2 px-2" style={{ padding: '16px 0', WebkitOverflowScrolling: 'touch' }}>
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -63,7 +63,7 @@ export default function MenuPage() {
                     ? 'bg-primary text-white shadow-lg shadow-primary/30'
                     : 'bg-surface-light text-text-secondary hover:text-white hover:bg-surface-mid'
                 }`}
-                style={{ fontFamily: 'var(--font-display)', padding: '12px 24px' }}
+                style={{ fontFamily: 'var(--font-display)', padding: '10px 16px', fontSize: '12px' }}
               >
                 <span className="text-lg">{cat.icon}</span>
                 {cat.name}
